@@ -67,16 +67,16 @@
 .front_image{
   animation: upDown 3s infinite;
 }
-.icon{
+/* .icon{
   animation: upDown 3s infinite;
   transition: all linear 0.2s;
 }
 .icon:hover{
   filter: drop-shadow(0px 0px 10px rgb(107, 153, 251));
   scale: 1.1;
-  
+   */
 
-}
+/* } */
 
 @keyframes upDown {
   0% {

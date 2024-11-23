@@ -33,23 +33,23 @@ const Navbar = () => {
           viewport={{once:true}}
           className="w-[60%] h-10 flex items-center justify-between">
         <h1 className="logo_font text-3xl  w-40">Alok Singh</h1>
-        <Link to="home" smooth={true} duration={500} className="">
+        <Link to="home" smooth={true} duration={500} className="cursor-pointer hover:text-blue-300">
           Home
         </Link>
-        <Link to="about" smooth={true} duration={500} className="">
+        <Link to="about" smooth={true} duration={500} className="cursor-pointer hover:text-blue-300">
           About
         </Link>
-        <Link to="skills" smooth={true} duration={500} className="">
+        <Link to="skills" smooth={true} duration={500} className="cursor-pointer hover:text-blue-300">
           Skills
         </Link>
-        <Link to="projects" smooth={true} duration={500} className="">
+        <Link to="projects" smooth={true} duration={500} className="cursor-pointer hover:text-blue-300">
           Projects
         </Link>
       </motion.div>
       <motion.div
        initial={{opacity:0, scale:0.3, y:100}}
        animate={{opacity:1, scale:1, y:0}}
-       transition={{duration:.8, ease:easeInOut}}
+       transition={{duration:.8}}
        viewport={{once:true}}
       >
         <Button data={"Contact me"} />
