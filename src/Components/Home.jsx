@@ -103,7 +103,7 @@ function Home() {
 
             <div className="overflow-hidden">
               <motion.h1
-                className=" text-6xl font-semibold mt-3 text-blue-400 origin-left "
+                className=" text-6xl font-semibold mt-3 pb-3 text-blue-400 origin-left "
                 initial={{ y: 100, opacity: 0, rotate: 90 }}
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
                 transition={{
