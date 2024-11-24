@@ -9,10 +9,11 @@ import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import { motion } from "framer-motion";
 import { div } from "framer-motion/client";
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
   const [loading, setLoading] = useState(true);
-
+  const locomotiveScroll = new LocomotiveScroll
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);

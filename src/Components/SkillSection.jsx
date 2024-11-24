@@ -14,8 +14,8 @@ function SkillSection() {
     { icon: js, name: "JAVASCRIPT", progress: 68 },
     { icon: react, name: "REACT", progress: 78 },
     { icon: tailwind, name: "TAILWIND", progress: 78 },
-    { icon: tailwind, name: "TAILWIND", progress: 78 },
-    { icon: tailwind, name: "TAILWIND", progress: 78 },
+    { icon: tailwind, name: "FRAMER", progress: 78 },
+    { icon: tailwind, name: "GSAP", progress: 78 },
   ];
 
   // Initialize state for progress values
