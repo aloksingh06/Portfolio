@@ -62,7 +62,7 @@ function Hover({ value }) {
         {/* Animated Progress Circle */}
         <circle
           cx="100"
-          cy="96"
+          cy="99"
           r="78"
           fill="none"
           stroke="url(#GradientColor)"

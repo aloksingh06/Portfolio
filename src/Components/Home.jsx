@@ -14,6 +14,7 @@ import Button from "./Button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
+import NavbarMin from "./NavbarMin";
 
 function Home() {
   const [loopNum, setLoopNum] = useState(0);
@@ -55,33 +56,24 @@ function Home() {
 
   const [sequetial, setsequetial] = useState(false);
   const [anim, setanim] = useState(null);
-  //gsap animation
-  gsap.registerPlugin(ScrollTrigger);
-  const navbarRef = useRef(); // Ref for the Navbar
-  const homeRef = useRef(); // Ref for the entire page
-  
-  useEffect(() => {
-    // GSAP Animation for Navbar Opacity
-   const animation = gsap.to(navbarRef.current, {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: homeRef.current, // Trigger element
-        start: "top -30%", 
-        end: "top 30%", 
-        scrub: true, 
-        
-      },
-    });
-    return () => {
-      animation.scrollTrigger?.kill(); // Remove the ScrollTrigger instance
-      animation.kill(); // Stop GSAP animation
-    };
-  }, []);
+  //framer animation
+  const homeref = useRef(null)
+  const { scrollYProgress,scrollY } = useScroll({
+    target: homeref, // Ref of the element to track
+    offset: ["start end", "end start"], // Offset defines when scroll starts/ends
+  });
+  //navbar
+  const opacity1 = useTransform(scrollY,[0,200],[1,0])
+
+  //navbarmin
+  const opacity2 = useTransform(scrollY,[0,200],[0,1])
+
   return (
     <motion.div
+    ref={homeref}
+
     data-scroll 
      data-scroll-speed="2"
-    ref={homeRef}
       initial={{ y: "100%" }}
       animate={{ y: 0 }}
       transition={{ duration: 1, ease: easeInOut }}
@@ -91,12 +83,18 @@ function Home() {
     >
       {/* <motion.div initial={{scale:0,opacity:0}} animate={{scale:1, opacity:1}} transition={{duration:2, delay:3.5}} className=" w-40 h-10 fixed top-[62%] left-[40%] z-50 top-0 bg-[#60a5fa] rounded-full absolute top-[55vh] left-[35%] blur-[50px] "></motion.div> */}
       <motion.div
-      ref={navbarRef}
-        
-        className="w-full fixed  top-3  z-40"
+      style={{opacity:opacity1}}
+        className="w-[87%] ml-28 fixed  top-3  z-50"
       >
         <Navbar />
       </motion.div>
+
+      {/* <motion.div
+      style={{opacity:opacity2}}
+        className="w-full fixed  top-3  z-40"
+      >
+        <NavbarMin />
+      </motion.div> */}
 
       {sequetial && (
         <div className=" flex">

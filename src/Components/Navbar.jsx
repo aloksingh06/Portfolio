@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import Button from "./Button";
-import { Link } from "react-scroll";
+
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Navbar = ({ opacity }) => {
   const [sequential, setSequential] = useState(false);
 
   return (
     <motion.div
+    
       initial={{
         width: "0%",
         opacity: 0,
       }}
       animate={{
-        width: "87%",
+        width: "100%",
         opacity: 1,
       }}
       transition={{ duration: 0.5, delay: 0.7 }}
       viewport={{ once: true }}
       onAnimationComplete={() => setSequential(true)}
-      style={{ opacity }} // Use inline styles for dynamic opacity
-      className="relative w-[87%] h-[9vh] bg-[rgb(8,8,24)] mx-auto flex justify-between items-center rounded-full drop-shadow-2xl shadow-blue-200 border-sky-700 border-[0.1px] px-8"
+       // Use inline styles for dynamic opacity
+      className="relative w-[100%] h-[9vh] bg-[rgb(8,8,24)] mx-auto flex justify-between items-center rounded-full drop-shadow-2xl shadow-blue-200 border-sky-700 border-[0.1px] px-8"
     >
       {sequential && (
         <div className="w-full h-[65%] flex justify-between items-center overflow-hidden origin-left">
