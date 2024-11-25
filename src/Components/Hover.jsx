@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
 
 function Hover({ value }) {
@@ -13,7 +15,7 @@ function Hover({ value }) {
       } else {
         clearInterval(interval); // Stop animation
       }
-    }, 1);
+    },0.1);
   };
 
   const handleMouseLeave = () => {
@@ -21,7 +23,12 @@ function Hover({ value }) {
   };
 
   return (
-    <div
+    
+      <motion.div
+      initial={{ opacity: 0 }}
+      whileHover={{ opacity: 1 }}
+      transition={{ duration:0.7, ease: [0.6, 0.0, 0.7, 1] }}
+     
       className="relative w-48 h-48"
       onMouseEnter={handleMouseEnter} // Start animation on hover
       onMouseLeave={handleMouseLeave} // Reset on hover leave
@@ -39,7 +46,12 @@ function Hover({ value }) {
           </linearGradient>
         </defs>
         {/* Background Circle */}
-        <circle
+        <motion.circle
+        initial={{ opacity: 0.2 }}
+        whileHover={{ opacity:1}}
+      transition={{ duration:0.7, ease: [0.6, 0.0, 0.7, 1] }}
+
+        
           cx="100"
           cy="98"
           r="83"
@@ -50,8 +62,8 @@ function Hover({ value }) {
         {/* Animated Progress Circle */}
         <circle
           cx="100"
-          cy="98"
-          r="83"
+          cy="96"
+          r="78"
           fill="none"
           stroke="url(#GradientColor)"
           strokeWidth="23"
@@ -63,7 +75,8 @@ function Hover({ value }) {
           }}
         />
       </svg>
-    </div>
+    </motion.div>
+    
   );
 }
 

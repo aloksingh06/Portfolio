@@ -171,7 +171,7 @@ function Home() {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 2.5 }}
-                className=" "
+                className=" px-3 py-2  "
               >
                 <Button data={"Download Resume"} />
               </motion.div>
