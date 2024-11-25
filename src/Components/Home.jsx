@@ -13,7 +13,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Button from "./Button";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { easeInOut, motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, easeInOut, motion, useScroll, useTransform } from "framer-motion";
 import NavbarMin from "./NavbarMin";
 
 function Home() {
@@ -82,19 +82,33 @@ function Home() {
       className="page1 w-full h-screen relative bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] overflow-x-hidden "
     >
       {/* <motion.div initial={{scale:0,opacity:0}} animate={{scale:1, opacity:1}} transition={{duration:2, delay:3.5}} className=" w-40 h-10 fixed top-[62%] left-[40%] z-50 top-0 bg-[#60a5fa] rounded-full absolute top-[55vh] left-[35%] blur-[50px] "></motion.div> */}
+
+      <AnimatePresence>
+
       <motion.div
+       exit={{opacity:0}}
+       transition={{duration:2, delay:3.5}}
       style={{opacity:opacity1}}
         className="w-[87%] ml-28 fixed  top-3  z-50"
       >
         <Navbar />
       </motion.div>
+      </AnimatePresence>
+      
 
-      {/* <motion.div
+      {/* navbarmin */}
+      <AnimatePresence>
+      <motion.div
+      exit={{opacity:0}}
+      transition={{duration:2, delay:3.5}}
       style={{opacity:opacity2}}
         className="w-full fixed  top-3  z-40"
       >
         <NavbarMin />
-      </motion.div> */}
+      </motion.div>
+
+      </AnimatePresence>
+      
 
       {sequetial && (
         <div className=" flex">
