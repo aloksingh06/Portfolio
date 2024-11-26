@@ -92,11 +92,11 @@ function AboutPage() {
   {/* left side content */}
   <div
       id="about"
-      className="bg1 w-[50%] h-screen  relative flex justify-center"
+      className="bg1 w-[50%]   h-[70vh] relative flex justify-center"
       data-scroll
       data-scroll-speed="-2"
     >
-      <div className="relative w-[100%] h-[50%] flex justify-center items-center"
+      <div className="relative w-[100%]  flex justify-center items-center"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -118,15 +118,15 @@ function AboutPage() {
           style={{
             transformStyle: "preserve-3d", // Required for 3D effect
           }}
-          className="w-[50%] rounded-lg"
+          className="w-[50%] ml-10 rounded-lg"
           src={myimg}
           alt="Profile"
         />
       </div>
     </div>
   {/* right side content */}
-  <div className="w-[40%]  px-10   ">
-   <div className="overflow-hidden">
+  <div className="w-[40%] h-[70vh]  px-16   ">
+   <div className="overflow-hidden pt-16">
    <motion.h1 
      initial={{opacity:0, x:-200}}
      whileInView={{opacity:1, x:0}}

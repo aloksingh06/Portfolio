@@ -15,7 +15,7 @@ function Hover({ value }) {
       } else {
         clearInterval(interval); // Stop animation
       }
-    },0.1);
+    },0);
   };
 
   const handleMouseLeave = () => {

@@ -3,6 +3,13 @@ import EpicFrame from "../assets/project/project1.png";
 import obysImg from "../assets/project/obys agency.png";
 import background from "../assets/project/detail-background.png";
 import cineImg from "../assets/project/cineverse.png";
+import refokusImg from "../assets/project/REFUKUS.png";
+import refokusvid from "../assets/project/REFOCUSVID.webm";
+import obysvid from "../assets/project/Showreel.mp4";
+import exovid from "../assets/project/exovid.mp4";
+import exoImg from "../assets/project/exoImg.png";
+import dribbleImg from "../assets/project/dribbleImg.png";
+import studysyncImg from "../assets/project/studysync.png";
 import epicframe from "../assets/videos/epicframe.mp4";
 
 function ProjectSection() {
@@ -29,13 +36,13 @@ function ProjectSection() {
         language3: "REDUX",
       },
       row: "1 / span 3", // Grid row
-      column: "1 / span 4", // Grid column
+      column: "1 / span 3", // Grid column
     },
     {
       name: "Obys Agency",
       description: "2 shows review and finding the best movie for you",
       image: obysImg,
-      video: epicframe,
+      video: obysvid,
       details:
         "Epic Frame is a comprehensive platform designed to provide users with detailed information about movies and TV shows. It includes insights into individual actors, their filmographies, and web series. The project aims to offer an intuitive and visually appealing user interface for exploring entertainment content.",
       feature: "Movie and TV show details, actors details",
@@ -53,8 +60,8 @@ function ProjectSection() {
       name: "Refokus",
       description:
         "This is a site for movie and TV show reviews and finding the best movie for you",
-      image: EpicFrame,
-      video: epicframe,
+      image: refokusImg,
+      video: refokusvid,
       details:
         "Epic Frame is a comprehensive platform designed to provide users with detailed information about movies and TV shows. It includes insights into individual actors, their filmographies, and web series. The project aims to offer an intuitive and visually appealing user interface for exploring entertainment content.",
       feature: "Movie and TV show details, actors details",
@@ -68,13 +75,13 @@ function ProjectSection() {
       row: "7 / span 3",
       column: "1 / span 3",
     },
-
+  
     {
-      name: "exoape",
+      name: "ExoApe",
       description:
         "4this is site for movie and tv shows review and finding the best movie for you",
-      image: EpicFrame,
-      video: epicframe,
+      image: exoImg,
+      video: exovid,
       details:
         "Epic Frame is a comprehensive platform designed to provide users with detailed information about movies and TV shows. It includes insights into individual actors, their filmographies, and web series. The project aims to offer an intuitive and visually appealing user interface for exploring entertainment content.",
       feature: "Movie and tv show details, actors detials",
@@ -89,10 +96,10 @@ function ProjectSection() {
       column: "4 / span 3",
     },
     {
-      name: "Dribble",
+      name: "StudySync",
       description:
         "5this is site for movie and tv shows review and finding the best movie for you",
-      image: EpicFrame,
+      image: studysyncImg,
       video: epicframe,
       details:
         "Epic Frame is a comprehensive platform designed to provide users with detailed information about movies and TV shows. It includes insights into individual actors, their filmographies, and web series. The project aims to offer an intuitive and visually appealing user interface for exploring entertainment content.",
@@ -139,7 +146,7 @@ function ProjectSection() {
               gridColumn: val.column,
             }}
             key={idx}
-            className={`relative transition-all duration-300 ease-in-out rounded-lg overflow-hidden cursor-pointer border-gray-300 bg-gradient-to-r to-[#654ea3] from-[#eaafc8] ${
+            className={`relative transition-all duration-300 ease-in-out rounded-lg overflow-hidden cursor-pointer border-gray-300 bg-[#001131] ${
               hoveredIndex === idx ? "scale-105" : "scale-100"
             }`}
             onMouseEnter={() => setHoveredIndex(idx)}
