@@ -52,13 +52,13 @@ function NavbarMin() {
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
               {/* Close Button */}
-              <div onClick={() => setVisible(false)} className="mt-10">
-                <i className="ri-close-line text-5xl hover:text-red-400 ml-[40vw] cursor-pointer"></i>
+              <div onClick={() => setVisible(false)} className="mt-10 ml-[40vw] w-fit hover:rotate-90 transition-transform">
+                <i className="ri-close-line text-5xl hover:text-red-400  cursor-pointer "></i>
               </div>
 
               {/* Navigation Links */}
               <motion.div className="flex flex-col mt-10 gap-5">
-                {["HOME", "ABOUT", "SKILLS", "PROJECT"].map((item, index) => (
+                {["HOME", "ABOUT", "SKILLS", "PROJECTS"].map((item, index) => (
                   <Link
                     key={index}
                     to={item.toLowerCase()}
