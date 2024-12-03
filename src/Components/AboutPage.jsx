@@ -4,8 +4,6 @@ import aboutImage from "../assets/aboutImage.png";
 import "remixicon/fonts/remixicon.css";
 import { div, h1 } from "framer-motion/client";
 import { easeInOut, motion } from "framer-motion";
-import LocomotiveScroll from "locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
 import myimg from "../assets/my-img.jpeg"
 import Button from "./Button";
 
@@ -30,19 +28,13 @@ function AboutPage() {
     setMousePosition({ x: 0, y: 0 }); // Reset on mouse leave
   };
 
-  useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll({});
-    return () => {
-      locomotiveScroll.destroy(); // Clean up on component unmount
-    };
-  }, []);
+
 
   return (
     <div
       id="about"
-      className="bg1 w-[1520px]  h-screen bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] relative pt-10  flex justify-center"
-    data-scroll
-          data-scroll-speed="-2"
+      className="bg1 w-[1520px]  h-screen bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] relative pt-0  flex justify-center"
+    
     >
      <div 
     //  style={{
@@ -55,16 +47,16 @@ function AboutPage() {
     //   boxShadow:"5px"
       
     //  }}
-      className="">
+      className="z-10">
 
-     <div className="w-[35vw] rotate-45 h-40 bg-gradient-to-tl to-[#60a5fa] from-[#d1495b] rounded-full absolute -z-99 bottom-1 right-5 blur-[120px] "></div>
+     {/* <div className="w-[35vw] rotate-45 h-40 bg-gradient-to-tl to-[#60a5fa] from-[#d1495b] rounded-full absolute -z-99 bottom-1 right-5 blur-[120px] "></div> */}
 
 {/* heading */}
 
 <motion.div initial={{ y: 100, opacity: 0 }}
     whileInView={{ y: 0, opacity: 1 }}
     transition={{ duration: 1, ease: easeInOut }}
-    viewport={{once:true}} className=" text-6xl text-center font-semibol pt-10 overflow-hidden">
+    viewport={{once:true}} className=" text-6xl font-semibold text-center font-semibol overflow-hidden">
   
     <h1>About Me</h1>
 
@@ -93,8 +85,7 @@ function AboutPage() {
   <div
       id="about"
       className="bg1 w-[50%]   h-[70vh] relative flex justify-center"
-      data-scroll
-      data-scroll-speed="-2"
+      
     >
       <div className="relative w-[100%]  flex justify-center items-center"
         onMouseMove={handleMouseMove}
@@ -104,19 +95,19 @@ function AboutPage() {
         }}
       >
         <motion.img
-          initial={{ opacity: 0, x: -200 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, scale:0.5 }}
+          whileInView={{ opacity: 1, scale:1 }}
           animate={{
             rotateX: mousePosition.y, // Rotate along X-axis based on Y
             rotateY: mousePosition.x, // Rotate along Y-axis based on X
           }}
           transition={{
-            duration: 0.2, // Fast response for hover effect
+            duration: 1, // Fast response for hover effect
             ease: "easeOut",
           }}
           viewport={{ once: true }}
           style={{
-            transformStyle: "preserve-3d", // Required for 3D effect
+            transformStyle: "preserve-3d",
           }}
           className="w-[50%] ml-10 rounded-lg"
           src={myimg}
@@ -130,9 +121,9 @@ function AboutPage() {
    <motion.h1 
      initial={{opacity:0, x:-200}}
      whileInView={{opacity:1, x:0}}
-     transition={{duration:1,delay:1}}
+     transition={{duration:1,delay:0}}
      viewport={{once:true}}
-   className="text-lg border-l-2 border-[#00b4d8] pl-5 hover:pl-7 transition-all duration-300 ease-in-out">
+   className="text-lg border-l-2 border-[#00b4d8] pl-5  ">
       Hello! I’m Alok Singh, a passionate learner and aspiring web
       developer currently pursuing a B.Tech in Computer Science
       Engineering from Government Engineering College, Raipur.
@@ -141,8 +132,9 @@ function AboutPage() {
     <div className="overflow-hidden">
     <motion.h1  initial={{opacity:0, x:-200}}
      whileInView={{opacity:1, x:0}}
-     transition={{duration:1,delay:1}}
-     viewport={{once:true}} className="mt-3 text-sm text-white ">
+     transition={{duration:1,delay:0}}
+     viewport={{once:true}}
+      className="mt-3 text-sm text-white ">
       I’m dedicated to honing my skills in web development and building
       user-friendly, interactive web applications. With a strong interest
       in technology and problem-solving, I aim to contribute innovative
@@ -155,7 +147,7 @@ function AboutPage() {
         <motion.div
         initial={{opacity:0, x:100}}
      whileInView={{opacity:1, x:0}}
-     transition={{duration:1,delay:1}} 
+     transition={{duration:1,delay:0}} 
      viewport={{once:true}}
         className=" flex relative rounded-full flex">
           <i

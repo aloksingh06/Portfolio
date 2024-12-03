@@ -66,7 +66,8 @@ const Navbar = ({ opacity }) => {
             >
               About
             </Link>
-            <Link
+           
+           <Link
               to="skills"
               smooth={true}
               duration={500}
@@ -78,6 +79,7 @@ const Navbar = ({ opacity }) => {
             >
               Skills
             </Link>
+           
             <Link
               to="projects"
               smooth={true}
@@ -97,7 +99,15 @@ const Navbar = ({ opacity }) => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Button data={"Contact me"} />
+            <div className="button inline-block text-lg px-5 py-1 mr-5 shadow-blue-200 border-sky-700 border-[1px] rounded-full">
+        <Link 
+              smooth={true}
+              duration={500}
+              onClick={()=>handleClick("CONTACT")}
+
+              delay={1500}
+               to="contact" className="button-text">Contact Me</Link>
+      </div>
           </motion.div>
         </div>
       )}

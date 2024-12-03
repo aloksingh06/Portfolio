@@ -72,6 +72,8 @@ function NavbarMin() {
                     initial={{opacity:0, y:100}}
                     exit={{opacity:0, y:100}}
                     animate={{opacity:1, y:0}}
+                    
+              
             transition={{ duration: 0.5, ease: "easeInOut", delay:0.5 }}
 
                     >{item}</motion.div>

@@ -6,6 +6,8 @@ import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
 import Gsap from "../assets/Gsap.png";
 import redux from "../assets/redux.png";
+import background from "../assets/project/detail-background.png";
+
 import framer from "../assets/framer.webp";
 import { motion } from "framer-motion";
 import Hover from "./Hover";
@@ -42,24 +44,33 @@ function SkillSection() {
       if (count === targetValue) {
         clearInterval(interval); // Stop when target is reached
       }
-    }, 15);
+    }, 12);
   };
 
   return (
     <div
       id="skills"
-      className="w-full h-full  p-20 bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)]"
+      className="w-full h-full z-10 p-20 bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)]"
     >
-      <h1 className="text-center text-5xl font-semibold text-white">
-        My Skill
-      </h1>
+
+   {/* element */}
+   
+   <div style={{
+              // backgroundImage: `url(${background})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              borderRadius: "20px",
+            }}
+            className=" flex flex-col items-center p-7 z-50 bg-opacity-90">
+
+   <h1 className="text-center text-7xl font-semibold text-white">Skills</h1>
       <p className="text-center w-[70%] mt-8 text-blue-200 m-auto">
         The skills section highlights my technical expertise and the tools,
         technologies, and frameworks I am proficient in. It reflects my ability
         to create innovative solutions and impactful applications, showcasing my
         core competencies and professional capabilities.
       </p>
-      <div className="flex gap-10 w-[80%] m-auto justify-center pt-20 shrink-0 flex-wrap">
+      <div className="flex gap-10 w-[80%] m-auto justify-center pt-20 pb-10 shrink-0 flex-wrap">
         {/* Skills */}
         {skillData.map((val, idx) => (
           <motion.div
@@ -68,37 +79,42 @@ function SkillSection() {
             transition={{ duration: 1, delay: 0.2 }}
             viewport={{ once: true }}
             key={idx}
-            className="group relative flex flex-col items-center justify-center relative"
+            className="group relative z-10 flex flex-col items-center justify-center relative"
           >
             {/* Parent */}
             <motion.div
               className="w-48 h-48 flex flex-col justify-center items-center rounded-full 
     transition-transform duration-500 ease-in-out  
-    group-hover:shadow-[0px_0px_10px_3px_rgba(0,180,216,0.4)]"
+    group-hover:shadow-[0px_0px_10px_3px_rgba(0,180,216,0.0)]"
             >
               <motion.div
                 onHoverStart={() => count(idx, val.progress)} // Trigger count on hover
-                className="inner w-36 h-36 bg-[rgba(255,255,255,0.2)] shadow-inner flex justify-center items-center rounded-full relative group-hover:bg-[rgba(255,255,255,0.1)]"
+                className="inner w-36 h-36 bg-[rgba(255,255,255,0.2)] shadow-inner flex justify-center items-center rounded-full relative group-hover:bg-[rgba(255,255,255,0.2)]"
               >
                 <motion.img
                   src={val.icon}
                   alt={val.name}
-                  className="w-[70%] opacity-100 transition-all duration-3000 ease-in-out group-hover:blur-[2px]"
+                  className="w-[70%] opacity-100 transition-all duration-1000 ease-in-out group-hover:opacity-0 "
                 />
-                <div className="skillText  text-[rgb(0,18,51)]   font-semibold text-2xl w-10 inline-block opacity-0 group-hover:opacity-100 absolute">
+                <div className="skillText  text-white   font-semibold text-3xl w-10 inline-block opacity-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out absolute">
                   {progressCounts[idx]}%
-                  <div className="absolute -top-[83px] -left-[80px] transform ">
+                  <div className="absolute -top-[83px] -left-[80px] z-30 transform ">
                     <Hover value={val.progress} />
                   </div>
                 </div>
               </motion.div>
             </motion.div>
-            <h1 className="text-center mt-3 absolute top-[105%] font-semibold opacity-0 translate-y-[-50px] group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
-              {val.name}
-            </h1>
+            <div className="text-center  mt-3 absolute z-50 top-[105%] font-semibold opacity-0 translate-y-[-50px] group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+              <h1>{val.name}</h1>
+            </div>
           </motion.div>
         ))}
       </div>
+   </div>
+   
+
+
+     
     </div>
   );
 }

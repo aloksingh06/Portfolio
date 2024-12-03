@@ -72,11 +72,10 @@ function Home() {
     <motion.div
     ref={homeref}
 
-    data-scroll 
-     data-scroll-speed="2"
-      initial={{ y: "100%" }}
-      animate={{ y: 0 }}
-      transition={{ duration: 1, ease: easeInOut }}
+    
+      initial={{ y: "100%", scale:0.6 , x:0 }}
+      animate={{ y: 0, scale:1, x:0 }}
+      transition={{ duration: 0.9, ease: easeInOut }}
       onAnimationComplete={() => setsequetial(true)}
       id="home"
       className="page1 w-full h-screen relative bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] overflow-x-hidden "
@@ -117,7 +116,7 @@ function Home() {
               <motion.h1
                 initial={{ y: 100, opacity: 0, rotate: 90 }}
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 onAnimationComplete={() => setanim(2)}
                 className="text-3xl font-semibold text-zinc-400 origin-left"
               >
@@ -132,7 +131,7 @@ function Home() {
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
                 transition={{
                   duration: 1,
-                  delay: 1.3,
+                  delay: .8,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className="name text-7xl font-semibold mt-1 origin-left"
@@ -150,7 +149,7 @@ function Home() {
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
                 transition={{
                   duration: 1,
-                  delay: 1.6,
+                  delay: 1.2,
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
@@ -163,13 +162,13 @@ function Home() {
               <motion.div
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 1.5 }}
+                transition={{ duration: 1, delay: 1.2 }}
                 className="p-3 mt-5 border-l-2 border-blue-500 text-zinc-400"
               >
                 <motion.h1
                   initial={{ x: -600 }}
                   animate={{ x: 0 }}
-                  transition={{ duration: 1, delay: 2.5 }}
+                  transition={{ duration: 1, delay: 1.8 }}
                 >
                   {" "}
                   I love transforming designs into interactive and responsive
@@ -185,15 +184,17 @@ function Home() {
                 transition={{ duration: 1, delay: 2.5 }}
                 className=" px-3 py-2  "
               >
-                <Button data={"Download Resume"} />
+                <div className="button inline-block text-lg px-5 py-1 mr-5 shadow-blue-200 border-sky-700 border-[1px] rounded-full">
+        <a href="https://drive.usercontent.google.com/u/0/uc?id=1Cl8W0A3lxS0M6A-2d4v7BjiqzpcWXlN9&export=download" className="button-text">Download Resume</a>
+      </div>
               </motion.div>
             </div>
           </div>
-          <div className="w-[40%] h-screen flex justify-center items-center ml-40  ">
+          <div className="animate-logo w-[40%] h-screen flex justify-center items-center ml-40  ">
             <motion.img
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+              transition={{ duration: 1.7, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
               className="front_image w-[65%] "
               src={img}
               alt=""
@@ -205,7 +206,7 @@ function Home() {
       <motion.img
         initial={{ y: 450, x: -1100, scale: 2, opacity: 0 }}
         animate={{ y: [450, 300, 0], x: [-1100, 300, 0], scale: 1, opacity: 1 }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[33%] right-[22%]"
         src={html}
         alt=""
@@ -218,7 +219,7 @@ function Home() {
           scale: 1,
           opacity: 1,
         }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[65%] right-[15%]"
         src={css}
         alt=""
@@ -226,7 +227,7 @@ function Home() {
       <motion.img
         initial={{ y: -300, x: -800, scale: 2, opacity: 0 }}
         animate={{ y: [-300, 300, 0], x: [-800, 400, 0], scale: 1, opacity: 1 }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[52%] right-[20%]"
         src={js}
         alt=""
@@ -239,7 +240,7 @@ function Home() {
           scale: 1,
           opacity: 1,
         }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[44%] right-[23%]"
         src={redux}
         alt=""
@@ -253,7 +254,7 @@ function Home() {
           scale: 1,
           opacity: 1,
         }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-12 absolute top-[55%] right-[10%]"
         src={Gsap}
         alt=""
@@ -266,7 +267,7 @@ function Home() {
           scale: 1,
           opacity: 1,
         }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[65%] right-[25%]"
         src={framer}
         alt=""
@@ -279,7 +280,7 @@ function Home() {
           scale: 1,
           opacity: 1,
         }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[55%] right-[30%]"
         src={tailwind}
         alt=""
@@ -287,7 +288,7 @@ function Home() {
       <motion.img
         initial={{ y: 200, x: -900, opacity: 0 }}
         animate={{ y: [200, -50, 0], x: [-900, 400, 0], opacity: 1 }}
-        transition={{ duration: 2, delay: 3.5, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 2, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
         className="icon w-14 absolute top-[40%] right-[28%]"
         src={react}
         alt=""

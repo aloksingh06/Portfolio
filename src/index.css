@@ -10,6 +10,28 @@
   src: url('./Fonts/Hindia.woff') format('woff');
 }
 
+
+::-webkit-scrollbar {
+  width: 5px; /* For vertical scrollbars */
+  height: 10px; /* For horizontal scrollbars */
+}
+
+/* Track styling (background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #001233; 
+  border-radius: 5px; 
+}
+
+/* Thumb styling (scrolling handle) */
+::-webkit-scrollbar-thumb {
+  background: #6f6f707a; 
+  border-radius: 5px;
+}
+
+/* Thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: #004bb5; 
+}
 .logo_font{
   font-family: "Oswald",sans-serif;
   font-weight: 400;
@@ -116,3 +138,14 @@
 }
 
 /* for navbar animation */
+[data-scroll-container] {
+  position: relative;
+  overflow: hidden;
+}
+section[data-scroll-section] {
+  min-height: 100vh;
+  padding: 20px;
+  background: #f0f0f0;
+  margin: 10px 0;
+}
+
