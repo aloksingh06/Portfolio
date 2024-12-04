@@ -116,7 +116,7 @@ const [success, setsuccess] = useState(null)
         />
       </div>
 
-      <div className="w-full">
+      <div className="w-full ">
         <h1 className="text-5xl font-semibold text-center mb-2">Contact me</h1>
          <h1 className="text-center mb-10 text-green-500 text-lx">{success}</h1>
         <form

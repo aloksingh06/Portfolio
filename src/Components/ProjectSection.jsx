@@ -67,7 +67,7 @@ function ProjectSection() {
       keyPoint: {
         feature1: "Smooth scrolling",
         feature2: "Animations",
-        feature2: "Hover animation",
+        feature3: "Hover animation",
        
       },
       row: "4 / span 3",
@@ -96,7 +96,7 @@ function ProjectSection() {
       keyPoint: {
         feature1: "Smooth scrolling",
         feature2: "Scroll Animation",
-        feature2: "Animation",
+        feature3: "Animation",
       },
       row: "7 / span 3",
       column: "1 / span 3",
@@ -119,12 +119,12 @@ function ProjectSection() {
         language1: "REACT JS",
         language2: "TAILWIND CSS",
         language3: "Framer Motion",
-        language3: "GSAP",
+        language4: "GSAP",
       },
       keyPoint: {
         feature1: "Smooth scrolling",
         feature2: "Scroll Animation",
-        feature2: "Animation",
+        feature3: "Animation",
       },
       row: "10 / span 3",
       column: "3 / span 3",

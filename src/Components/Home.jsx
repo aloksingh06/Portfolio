@@ -71,7 +71,8 @@ function Home() {
   return (
     <motion.div
     ref={homeref}
-
+      // data-scroll
+      // data-scroll-speed="0"
     
       initial={{ y: "100%", scale:0.6 , x:0 }}
       animate={{ y: 0, scale:1, x:0 }}

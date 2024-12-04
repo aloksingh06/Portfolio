@@ -32,6 +32,8 @@ function AboutPage() {
 
   return (
     <div
+    // data-scroll
+    //   data-scroll-speed="2"
       id="about"
       className="bg1 w-full  h-screen bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] relative pt-0  flex justify-center"
     
@@ -87,7 +89,10 @@ function AboutPage() {
       className="bg1 w-[50%]   h-[70vh] relative flex justify-center"
       
     >
-      <div className="relative w-[100%]  flex justify-center items-center"
+      <div
+      data-scroll
+        data-scroll-speed="0.1"
+      className="relative w-[100%]  flex justify-center items-center"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{

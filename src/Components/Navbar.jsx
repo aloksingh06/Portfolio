@@ -45,15 +45,29 @@ const Navbar = ({ opacity }) => {
             className="w-[60%] h-10 flex items-center justify-between"
           >
             <h1 className="logo_font text-3xl w-40">Alok Singh</h1>
-            <Link
+            {["Home","About","Skills","Projects"].map((val,idx)=>(
+              <Link
+              to={val.toLowerCase()}
+              smooth={true}
+              duration={500}
+              onClick={()=>handleClick(val.toUpperCase())}
+              delay={1700}
+              className="cursor-pointer group hover:text-blue-200 relative "
+            >
+              <h1>{val}</h1>
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+            ))}
+            {/* <Link
               to="home"
               smooth={true}
               duration={500}
               onClick={()=>handleClick("HOME")}
               delay={1700}
-              className="cursor-pointer hover:text-blue-300"
+              className="cursor-pointer group hover:text-blue-200 relative "
             >
-              Home
+              <h1>Home</h1>
+              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             <Link
               to="about"
@@ -90,7 +104,7 @@ const Navbar = ({ opacity }) => {
               className="cursor-pointer hover:text-blue-300"
             >
               Projects
-            </Link>
+            </Link> */}
           </motion.div>
 
           {/* Contact Me Button */}

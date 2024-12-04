@@ -49,6 +49,7 @@ function SkillSection() {
 
   return (
     <div
+    
       id="skills"
       className="w-full h-full z-10 p-20 bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)]"
     >
@@ -60,8 +61,9 @@ function SkillSection() {
               backgroundPosition: "center",
               backgroundSize: "cover",
               borderRadius: "20px",
+              
             }}
-            className=" flex flex-col items-center p-7 z-50 bg-opacity-90">
+            className=" flex flex-col  items-center p-7 z-50 bg-opacity-90">
 
    <h1 className="text-center text-7xl font-semibold text-white">Skills</h1>
       <p className="text-center w-[70%] mt-8 text-blue-200 m-auto">
