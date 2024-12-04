@@ -33,7 +33,7 @@ function AboutPage() {
   return (
     <div
       id="about"
-      className="bg1 w-[1520px]  h-screen bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] relative pt-0  flex justify-center"
+      className="bg1 w-full  h-screen bg-gradient-to-r to-[#001233] via-[#001233] from-[rgba(0,0,0,5)] relative pt-0  flex justify-center"
     
     >
      <div 

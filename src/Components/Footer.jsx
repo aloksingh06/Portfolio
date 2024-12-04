@@ -26,7 +26,7 @@ function Footer() {
             <a
              target="_blank"
               href={val.link}
-              className=" w-fit h-fit p-2 flex justify-center items-centere rounded-full bg-blue-300 "
+              className=" w-fit h-fit p-2 flex justify-center items-centere rounded-full bg-blue-300 cursor-pointer"
             >
               <i class={`${val.url} text-5xl  text-blue-900`}></i>
             </a>
@@ -35,7 +35,7 @@ function Footer() {
       </div>
       <div className="w-full flex max-w-screen-lg justify-between m-auto mt-7 pb-10">
         <h1 className="logo_font text-3xl  w-40">Alok Singh</h1>
-        <div className=" flex gap-10">
+        <div className=" flex gap-10 cursor-pointer">
           <Link to="home" smooth={true} duration={500} className="">
             Home
           </Link>

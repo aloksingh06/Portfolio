@@ -27,9 +27,9 @@ const locomotiveScroll = new LocomotiveScroll();
   }, []);
 
   return (
-    <div className="main text-white w-full h-full relative bg-zinc-900 overflow-x-hidden">
+    <div className="main text-white w-full h-full relative bg-[rgb(17,62,132)] overflow-x-hidden">
       {loading ? (
-        <div className="bg-zinc-900 w-full h-screen">
+        <div className="bg-[rgb(17,62,132)] w-full h-screen">
           <motion.div
             initial={{ y: 0 }}
             animate={{ y: "-100%" }}

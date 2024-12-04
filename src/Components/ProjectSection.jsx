@@ -43,15 +43,17 @@ function ProjectSection() {
       },
       row: "1 / span 3", // Grid row
       column: "1 / span 3", // Grid column
+      Textrow: "1 / span 3", // Grid row
+      Textcolumn: "4 / span 6", // Grid column
     },
     {
       name: "Obys Agency",
-      description: "2 shows review and finding the best movie for you",
+      description: "This project is a creative and visually appealing website inspired by the Obys Agency",
       image: obysImg,
       video: obysvid,
       details:
         "This project is a creative and visually appealing website inspired by the Obys Agency, emphasizing advanced animations and seamless user interactions. It showcases my proficiency in frontend development, modern web design principles, and attention to detail.",
-      feature: "Movie and TV show details, actors details",
+      
       web: "https://aloksingh06.github.io/Obys-Agency-clone/",
       github: "https://github.com/aloksingh06/Obys-Agency-clone",
       languages: {
@@ -65,68 +67,89 @@ function ProjectSection() {
       keyPoint: {
         feature1: "Smooth scrolling",
         feature2: "Animations",
+        feature2: "Hover animation",
        
       },
       row: "4 / span 3",
       column: "4 / span 3",
+      Textrow: "4 / span 3",
+      Textcolumn: "1 / span 3",
+
     },
     {
       name: "Refokus",
       description:
-        "This is a site for movie and TV show reviews and finding the best movie for you",
+        "This project is a clone of Refokus, a sleek and animation-centric website showcasing smooth transitions and advanced visual effects.",
       image: refokusImg,
       video: refokusvid,
       details:
         "This project is a clone of Refokus, a sleek and animation-centric website showcasing smooth transitions and advanced visual effects. The project highlights my ability to replicate complex designs and implement modern frontend technologies.",
       feature: "Movie and TV show details, actors details",
       web: "https://aloksingh06.github.io/refokus/",
-      github: "https://github.com/aloksingh06/EpicFrame",
+      github: "https://github.com/aloksingh06/refokus",
       languages: {
         language1: "REACT JS",
         language2: "TAILWIND CSS",
-        language3: "REDUX",
+        language3: "FRAMER MOTION",
+        language4: "GSAP",
+      },
+      keyPoint: {
+        feature1: "Smooth scrolling",
+        feature2: "Scroll Animation",
+        feature2: "Animation",
       },
       row: "7 / span 3",
       column: "1 / span 3",
+      Textrow: "7 / span 3",
+      Textcolumn: "4 / span 3",
     },
 
     {
       name: "ExoApe",
       description:
-        "4this is site for movie and tv shows review and finding the best movie for you",
+        "This project is a visually dynamic and interactive website inspired by Exoape, emphasizing advanced animations and fluid transitions.",
       image: exoImg,
       video: exovid,
       details:
-        "Epic Frame is a comprehensive platform designed to provide users with detailed information about movies and TV shows. It includes insights into individual actors, their filmographies, and web series. The project aims to offer an intuitive and visually appealing user interface for exploring entertainment content.",
-      feature: "Movie and tv show details, actors detials",
-      web: "https://aloksingh06.github.io/EpicFrame/",
-      github: "https://github.com/aloksingh06/EpicFrame",
+        "This project is a visually dynamic and interactive website inspired by Exoape, emphasizing advanced animations and fluid transitions. Built with modern web development tools, it showcases my expertise in creating engaging user interfaces, leveraging animation libraries, and implementing seamless navigation. This clone demonstrates my ability to replicate high-quality designs while focusing on performance and user experience.",
+  
+      web: "https://aloksingh06.github.io/exoape-clone/",
+      github: "https://github.com/aloksingh06/exoape-clone",
       languages: {
         language1: "REACT JS",
         language2: "TAILWIND CSS",
-        language3: "REDUX",
+        language3: "Framer Motion",
+        language3: "GSAP",
+      },
+      keyPoint: {
+        feature1: "Smooth scrolling",
+        feature2: "Scroll Animation",
+        feature2: "Animation",
       },
       row: "10 / span 3",
       column: "3 / span 3",
+      Textrow: "10 / span 3",
+      Textcolumn: "1 / span 2",
     },
     {
       name: "StudySync",
       description:
-        "5this is site for movie and tv shows review and finding the best movie for you",
+        "This project is a comprehensive showcase of my frontend development skills, featuring a visually appealing and user-friendly design. ",
       image: studysyncImg,
       video: epicframe,
       details:
-        "Epic Frame is a comprehensive platform designed to provide users with detailed information about movies and TV shows. It includes insights into individual actors, their filmographies, and web series. The project aims to offer an intuitive and visually appealing user interface for exploring entertainment content.",
-      feature: "Movie and tv show details, actors detials",
-      web: "https://aloksingh06.github.io/EpicFrame/",
-      github: "https://github.com/aloksingh06/EpicFrame",
+        "This project is a comprehensive showcase of my frontend development skills, featuring a visually appealing and user-friendly design. It highlights my ability to create responsive layouts, implement modern design principles, and ensure seamless user interactions. This website serves as a testament to my proficiency in HTML, CSS, JavaScript, and advanced frontend frameworks, demonstrating a strong focus on both aesthetics and functionality.",
+      
+      web: "https://aloksingh06.github.io/StudySync-simpleProject/",
+      github: "https://github.com/aloksingh06/StudySync-simpleProject",
       languages: {
-        language1: "REACT JS",
-        language2: "TAILWIND CSS",
-        language3: "REDUX",
+        language1: "HTML",
+        language2: "CSS",
       },
       row: "13 / span 3",
       column: "2 / span 3",
+      Textrow: "13 / span 3",
+      Textcolumn: "6 / span 2",
     },
   ];
 
@@ -209,13 +232,16 @@ function ProjectSection() {
             )}
            </div>
           </div>
-          {/* <div style={{
-              gridRow: 1/3,
-              gridColumn: 4/7,
+          <div style={{
+              gridRow: val.Textrow,
+              gridColumn: val.Textcolumn,
             }}
-            className="flex justify-center items-center">
+            data-scroll
+            data-scroll-speed="0.5"
+
+            className="flex justify-center items-center z-10">
             <h1 className="text-7xl font-semibold">{val.name}</h1>
-          </div> */}
+          </div>
             </>
           
         ))}
@@ -236,13 +262,23 @@ function ProjectSection() {
           }}
           className="fixed inset-0 flex flex-col items-center p-7 z-50 bg-opacity-90 w-[100%] m-auto"
         >
+          <div className="flex w-full pb-10">
+          <div className="w-[90%] ">
           <a
           target="_blank"
             href={clickData.web}
-            className="text-4xl border-b-2 pb-2 mb-3 text-center font-semibold hover:text-blue-200"
+            className="text-5xl ml-[50%] border-b-2 pb-2 mb-3 text-center font-semibold hover:text-blue-200"
           >
             {clickData.name}
           </a>
+          </div>
+          <div
+                onClick={() => setclickanim(0)}
+                className="w-fit ml-64 cursor-pointer text-3xl hover:text-red-400 "
+              >
+                <i className="ri-close-line"></i>
+              </div>
+          </div>
           <div className="flex gap-5 mt-5">
             {/* Right data */}
             <div className="w-[50%]">
@@ -256,12 +292,7 @@ function ProjectSection() {
             </div>
             {/* Left data */}
             <div className="w-[50%] pl-5">
-              <div
-                onClick={() => setclickanim(0)}
-                className="w-fit ml-auto cursor-pointer text-3xl hover:text-red-400"
-              >
-                <i className="ri-close-line"></i>
-              </div>
+              
               <h1 className="border-l-2 border-blue-400 px-3">
                 {clickData.details}
               </h1>

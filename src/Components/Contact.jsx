@@ -17,6 +17,9 @@ export const Contact = () => {
     setformValue({ ...formValue, [name]: value }); // Update form values
   };
 
+const [button, setbutton] = useState("Send")
+const [success, setsuccess] = useState(null)
+
   // Form submission handler
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,6 +30,7 @@ export const Contact = () => {
 
     // If no errors, send the email
     if (Object.keys(errors).length === 0) {
+      setbutton("Sending...")
       emailjs
         .sendForm("service_ltixdv7", "template_dgtorr3", form.current, {
           publicKey: "383dDYazopI-LttLY",
@@ -34,6 +38,12 @@ export const Contact = () => {
         .then(
           () => {
             console.log("SUCCESS!");
+            setbutton("Send")
+            setsuccess("Email sent successfully!")
+            setTimeout(() => {
+              setsuccess(null)
+            }, 2000);
+
 
             setformValue(initialValues); // Reset the form after success
           },
@@ -76,7 +86,7 @@ export const Contact = () => {
       <div className="w-[100%]  h-10 bg-gradient-to-tl to-[#60a5fa] from-[#d1495b] z-0  absolute -z-99 top-[13%] blur-[80px] "></div>
 
       {/* arrow */}
-      <div className=" absolute top-[58%] left-[17%] ">
+      {/* <div className=" absolute top-[58%] left-[17%] ">
         <h1 className="text-7xl font-semibold">OBYS AGENCY</h1>
       </div>
 
@@ -86,7 +96,7 @@ export const Contact = () => {
 
       <div className=" absolute top-[60%] left-[50%] ">
         <h1 className="text-7xl font-semibold pl-20">REFOKUS</h1>
-      </div>
+      </div> */}
       {/* <div className="absolute top-[65%] left-[19%]">
         <img className="-rotate-90 w-[45vh] " src={arrow} alt="" />
       </div> */}
@@ -107,8 +117,8 @@ export const Contact = () => {
       </div>
 
       <div className="w-full">
-        <h1 className="text-5xl font-semibold text-center mb-10">Contact me</h1>
-
+        <h1 className="text-5xl font-semibold text-center mb-2">Contact me</h1>
+         <h1 className="text-center mb-10 text-green-500 text-lx">{success}</h1>
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -156,8 +166,9 @@ export const Contact = () => {
           <button
             type="submit"
             className="p-3 bg-blue-500 text-white rounded-[20px] hover:bg-blue-600"
+            
           >
-            Send
+            {button}
           </button>
         </form>
       </div>
