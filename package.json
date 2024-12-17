@@ -1,4 +1,5 @@
 {
+  "homepage": "https://aloksingh06.github.io/Portfolio",
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
@@ -6,6 +7,7 @@
   "scripts": {
     "build": "vite build",
     "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
