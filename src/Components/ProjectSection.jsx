@@ -119,7 +119,8 @@ function ProjectSection() {
         language1: "REACT JS",
         language2: "TAILWIND CSS",
         language3: "Framer Motion",
-        language4: "GSAP",
+        language4
+      : "GSAP",
       },
       keyPoint: {
         feature1: "Smooth scrolling",
