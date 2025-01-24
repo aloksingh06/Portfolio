@@ -186,7 +186,7 @@ function Home() {
                 className=" px-3 py-2  "
               >
                 <div className="button inline-block text-lg px-5 py-1 mr-5 shadow-blue-200 border-sky-700 border-[1px] rounded-full">
-        <a href="https://drive.usercontent.google.com/u/0/uc?id=1Cl8W0A3lxS0M6A-2d4v7BjiqzpcWXlN9&export=download" className="button-text">Download Resume</a>
+        <a href="https://drive.usercontent.google.com/u/0/uc?id=1Gp3sRaZAMmmWKfkOyXPrD1j_SW55aRIb&export=download" className="button-text">Download Resume</a>
       </div>
               </motion.div>
             </div>
