@@ -58,53 +58,7 @@ const Navbar = ({ opacity }) => {
               <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </Link>
             ))}
-            {/* <Link
-              to="home"
-              smooth={true}
-              duration={500}
-              onClick={()=>handleClick("HOME")}
-              delay={1700}
-              className="cursor-pointer group hover:text-blue-200 relative "
-            >
-              <h1>Home</h1>
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
-            <Link
-              to="about"
-              smooth={true}
-              duration={500}
-              delay={1700}
-              onClick={()=>handleClick("ABOUT")}
-
-              className="cursor-pointer hover:text-blue-300"
-            >
-              About
-            </Link>
-           
-           <Link
-              to="skills"
-              smooth={true}
-              duration={500}
-              onClick={()=>handleClick("SKILLS")}
-
-              delay={1700}
-
-              className="cursor-pointer hover:text-blue-300"
-            >
-              Skills
-            </Link>
-           
-            <Link
-              to="projects"
-              smooth={true}
-              duration={500}
-              onClick={()=>handleClick("PROJECT")}
-
-              delay={1700}
-              className="cursor-pointer hover:text-blue-300"
-            >
-              Projects
-            </Link> */}
+            
           </motion.div>
 
           {/* Contact Me Button */}
