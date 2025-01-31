@@ -126,7 +126,7 @@ function Home() {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.7, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
-              className="front_image xl:w-[65%] lg:w-[65%] sm:w-48 w-32 mt-28 sm:mt-40 lg:mt-10 "
+              className="front_image xl:w-[65%] lg:w-[65%] sm:w-48 w-40 mt-28 sm:mt-40 lg:mt-10 "
               src={img}
               alt=""
             />
@@ -164,7 +164,7 @@ function Home() {
 
             <div className="overflow-hidden">
               <motion.h1
-                className=" xl:text-6xl lg:text-[4vw] sm:text-5xl text-4xl font-semibold xl:mt-3 lg:mt-0 xl:pb-3 lg:pb-0 sm:pb-4 pb-2 text-blue-400 origin-left "
+                className=" xl:text-6xl lg:text-[4vw] sm:text-5xl text-3xl font-semibold xl:mt-3 lg:mt-0 xl:pb-3 lg:pb-0 sm:pb-4 pb-2 text-blue-400 origin-left "
                 initial={{ y: 100, opacity: 0, rotate: 90 }}
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
                 transition={{
@@ -189,7 +189,7 @@ function Home() {
                   initial={{ x: -600 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 1, delay: 1.8 }}
-                  className="xl:text-[1vw] lg:text-[1vw] sm:text-[2vw] text-center xl:text-left lg:text-left sm:text-center"
+                  className="xl:text-[1vw] lg:text-[1vw] sm:text-[2vw] text-xs text-center xl:text-left lg:text-left sm:text-center"
                 >
                   {" "}
                   I love transforming designs into interactive and responsive
