@@ -119,26 +119,26 @@ function Home() {
       
 
       {sequetial && (
-        <div className=" xl:flex lg:flex sm:flex flex-row  ">
+        <div className=" xl:flex lg:flex sm:flex-row flex-row  ">
           
-          <div className="img order-2 animate-logo w-full xl:w-[40%] lg:w-[40%] sm:w-[40%] xl:h-screen lg:h-screen sm:h-screen h-64 flex justify-center items-center xl:ml-40 lg:ml-7  ">
+          <div className="img order-2 animate-logo w-full xl:w-[40%] lg:w-[40%] sm:w-full xl:h-screen lg:h-screen sm:h-64 h-64 flex justify-center items-center xl:ml-40 lg:ml-7  ">
             <motion.img
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1.7, delay: 1.9, ease: [0.65, 0, 0.35, 1] }}
-              className="front_image xl:w-[65%] lg:w-[65%] sm:w-[65%] w-32 mt-28 "
+              className="front_image xl:w-[65%] lg:w-[65%] sm:w-48 w-32 mt-28 sm:mt-40 lg:mt-10 "
               src={img}
               alt=""
             />
           </div>
-          <div className="text order-1 xl:pt-[32vh] lg:pt-[32vh] sm:pt-[32vh] pt-10 xl:ml-40 lg:ml-32 xl:w-[45%] lg:w-[50%] flex-col justify-items-center xl:flex lg:flex sm:flex ">
+          <div className="text order-1 xl:pt-[32vh] lg:pt-[32vh] sm:pt-20 pt-10 xl:ml-40 lg:ml-32 xl:w-[45%] lg:w-[50%] flex-col lg:items-start sm:items-center justify-items-center xl:flex lg:flex sm:flex ">
             <div className="overflow-hidden">
               <motion.h1
                 initial={{ y: 100, opacity: 0, rotate: 90 }}
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 onAnimationComplete={() => setanim(2)}
-                className="xl:text-[2vw] lg:text-[2vw] sm:text-[2vw] text-xl font-semibold text-zinc-400 origin-left"
+                className="xl:text-[2vw] lg:text-[2vw] sm:text-2xl text-xl font-semibold text-zinc-400 origin-left"
               >
                 Hello I'm{" "}
               </motion.h1>
@@ -154,7 +154,7 @@ function Home() {
                   delay: .8,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="name xl:text-7xl lg:text-6xl lg:text-5xl text-5xl font-semibold mt-1 origin-left"
+                className="name xl:text-7xl lg:text-6xl sm:text-6xl text-5xl font-semibold mt-1 origin-left"
         
 
               >
@@ -164,7 +164,7 @@ function Home() {
 
             <div className="overflow-hidden">
               <motion.h1
-                className=" xl:text-6xl lg:text-[4vw] sm:text-[3vw] text-4xl font-semibold xl:mt-3 lg:mt-0 xl:pb-3 lg:pb-0 sm:pb-1 pb-2 text-blue-400 origin-left "
+                className=" xl:text-6xl lg:text-[4vw] sm:text-5xl text-4xl font-semibold xl:mt-3 lg:mt-0 xl:pb-3 lg:pb-0 sm:pb-4 pb-2 text-blue-400 origin-left "
                 initial={{ y: 100, opacity: 0, rotate: 90 }}
                 animate={{ y: 0, opacity: 1, rotate: 0 }}
                 transition={{
@@ -183,13 +183,13 @@ function Home() {
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 1.2 }}
-                className="p-3 mt-5 border-l-2 xl:border-blue-500 lg:border-blue-500 sm:border-blue-500 border-none text-zinc-400 xl:w-full lg:w-full sm:w-full w-[50%] m-auto"
+                className="p-3 mt-5 border-l-2 xl:border-blue-500 lg:border-blue-500 sm:border-blue-500 border-none text-zinc-400 xl:w-full lg:w-full sm:w-[50%] w-[50%] m-auto"
               >
                 <motion.h1
                   initial={{ x: -600 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 1, delay: 1.8 }}
-                  className="xl:text-[1vw] lg:text-[1vw] sm:text-[1vw] text-center xl:text-left lg:text-left sm:text-left"
+                  className="xl:text-[1vw] lg:text-[1vw] sm:text-[2vw] text-center xl:text-left lg:text-left sm:text-center"
                 >
                   {" "}
                   I love transforming designs into interactive and responsive
@@ -214,7 +214,7 @@ function Home() {
         </div>
       )}
 
-      <div className="hidden sm:inline lg:inline xl:inline 2xl:inline">
+      <div className="hidden sm:hidden lg:inline xl:inline 2xl:inline">
       <motion.img
         initial={{ y: 450, x: -1100, scale: 2, opacity: 0 }}
         animate={{ y: [450, 300, 0], x: [-1100, 300, 0], scale: 1, opacity: 1 }}
